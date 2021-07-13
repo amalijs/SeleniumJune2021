@@ -14,7 +14,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class MergeLead extends BaseClass {
 	
 		@Test(dataProvider = "fetchdata")
-		public void runMergeLead(String firstName, String lastName) throws InterruptedException {
+		public void runMergeLead(String firstName) throws InterruptedException {
 		driver.findElement(By.linkText("Merge Leads")).click();
 		driver.findElement(By.xpath("//img[@alt='Lookup']")).click();
 		Set<String> allWindows = driver.getWindowHandles();
@@ -31,7 +31,7 @@ public class MergeLead extends BaseClass {
 		Set<String> allWindows2 = driver.getWindowHandles();
 		List<String> allhandles2 = new ArrayList<String>(allWindows2);
 		driver.switchTo().window(allhandles2.get(1));
-		driver.findElement(By.xpath("//input[@name='firstName']")).sendKeys(lastName);
+		driver.findElement(By.xpath("//input[@name='firstName']")).sendKeys(firstName);
 		driver.findElement(By.xpath("//button[text()='Find Leads']")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a")).click();

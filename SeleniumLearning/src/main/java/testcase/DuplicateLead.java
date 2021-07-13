@@ -19,7 +19,7 @@ public class DuplicateLead extends BaseClass {
 		driver.findElement(By.xpath("//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a")).click();
 		driver.findElement(By.linkText("Duplicate Lead")).click();
 		driver.findElement(By.name("submitButton")).click();
-		driver.close();
+		//driver.close();
 }
 	
 	@BeforeTest
