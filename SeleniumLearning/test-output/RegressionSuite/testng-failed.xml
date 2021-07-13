@@ -6,14 +6,14 @@
   <parameter name="username" value="DemoSalesManager"/>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testcase.DuplicateLead">
+      <class name="testcase.MergeLead">
         <methods>
           <include name="closeBrosesr"/>
-          <include name="runDuplicateLead"/>
+          <include name="runMergeLead"/>
           <include name="setFileName"/>
           <include name="startApp"/>
         </methods>
-      </class> <!-- testcase.DuplicateLead -->
+      </class> <!-- testcase.MergeLead -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [RegressionSuite] -->
